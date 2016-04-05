@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package de.altf4.greeter;
+option go_package = "greeter";
+
+service Greeter {
+	rpc Say(SayRequest) returns (SayResponse) {}
+}
+
+message SayRequest {
+	string name = 1;
+}
+
+message SayResponse {
+	string reply = 1;
+}
